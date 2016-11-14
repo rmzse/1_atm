@@ -11,6 +11,8 @@ class Atm
       { status: false, message: 'insufficient funds in account', date: Date.today }
     when insufficient_funds_in_atm?(amount)
       { status: false, message: 'insufficient funds in ATM', date: Date.today }
+    when incorrect_pin?(pin_code, account.pin_code)
+      { status: false, message: 'wrong pin code', date: Date.today }
     else
       perform_transaction(amount, account)
     end
