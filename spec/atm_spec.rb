@@ -44,11 +44,14 @@ describe Atm do
     expect(subject.withdraw(5, '1234', account)).to eq expected_output
   end
 
-  it 'rejects withdrawals if account is :disabled' do
-    #allow(account).to receive(:account_status).and_return(:disabled)
+  context 'account is disabled' do
     let(:account) {instance_double('Account', pin_code: '1234', exp_date: '04/17', account_status: :disabled)}
-    expected_output = { status: false, message: 'account disabled', date: Date.today }
-    expect(subject.withdraw(5, '1234, account')).to eq expected_output
+
+    it 'rejects withdrawals if account is :disabled' do
+      #allow(account).to receive(:account_status).and_return(:disabled)
+      expected_output = { status: false, message: 'account disabled', date: Date.today }
+      expect(subject.withdraw(5, '1234, account')).to eq expected_output
+    end
   end
 
 end
