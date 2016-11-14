@@ -40,6 +40,10 @@ class Atm
     Date.strptime(exp_date, '%m/%y') < Date.today
   end
 
+  def account_disabled?(account_status)
+     account_status == :disabled
+  end
+
   def perform_transaction(amount, account)
     @funds -= amount
     account.balance -= amount
