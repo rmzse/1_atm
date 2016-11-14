@@ -34,6 +34,10 @@ class Atm
     pin_code != actual_pin
   end
 
+  def card_expired?(exp_date)
+    Date.strptime(exp_date, '%m%y') < Date.today
+  end
+
   def perform_transaction(amount, account)
     @funds -= amount
     account.balance -= amount
