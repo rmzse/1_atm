@@ -26,4 +26,6 @@ class Atm
     { status: true, message: 'success', date: Date.today, amount: amount }
   end
 
+  
+
 end
