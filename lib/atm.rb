@@ -28,6 +28,10 @@ class Atm
     @funds < amount
   end
 
+  def incorrect_pin?(pin_code, actual_pin)
+    pin_code != actual_pin
+  end
+
   def perform_transaction(amount, account)
     @funds -= amount
     account.balance -= amount
