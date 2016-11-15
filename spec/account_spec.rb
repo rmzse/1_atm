@@ -14,5 +14,9 @@ describe Account do
     expect(subject.account_status).to eq(:active)
   end
 
+  it 'has an account owner on initialize' do
+    expect(subject.account_owner).to eq 'Rod'
+  end
+
 
 end
