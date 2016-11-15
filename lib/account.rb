@@ -1,4 +1,7 @@
+require 'date'
+
 class Account
+  STANDARD_VALIDITY_YRS = 5
   attr_accessor :pin_code, :exp_date, :account_status, :account_owner, :pin_code_length
 
   def initialize
@@ -17,7 +20,7 @@ class Account
   end
 
   def set_card_exp_date
-    
+    Date.today.next_year(STANDARD_VALIDITY_YRS).strftime("%m/%y")
   end
 
 end

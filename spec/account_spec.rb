@@ -1,5 +1,6 @@
 require './lib/account.rb'
 
+
 describe Account do
 
   it 'has a pincode "1234" on initialize' do
@@ -8,7 +9,7 @@ describe Account do
   end
 
   it 'has an ATM card with expiry date of 11/22 on initialize' do
-    expect(subject.exp_date).to eq '11/22'
+    expect(subject.exp_date).to eq '11/21'
   end
 
   it 'has an account status of "active" on initialize' do
