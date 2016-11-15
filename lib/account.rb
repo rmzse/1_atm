@@ -10,12 +10,12 @@ class Account
     @exp_date = set_card_exp_date
     @account_status = :active
     @account_owner = 'Rod'
-    @pin_code_length = pin_length?(pin_code)
+    @pin_code_length = get_n_length(pin_code)
   end
 
   private
 
-  def pin_length?(number)
+  def get_n_length(number)
     number_length = Math.log10(number.to_i).to_i + 1
   end
 
