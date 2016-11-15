@@ -7,7 +7,7 @@ describe Account do
   end
 
   it 'has an ATM card with expiry date of 04/17 on initialize' do
-    expects(subject.exp_date).to eq '04/17' 
+    expect(subject.exp_date).to eq '04/17' 
   end
 
 
