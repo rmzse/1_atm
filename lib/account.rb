@@ -9,6 +9,8 @@ class Account
     @pin_code_length = pin_length?(pin_code)
   end
 
+  private
+
   def pin_length?(number)
     number_length = Math.log10(number.to_i).to_i + 1
   end
