@@ -21,7 +21,7 @@ describe Account do
   it 'checks if the pin code is 4 digits' do
     #number = rand(1000..9999)
     number = subject.pin_code.to_i
-    number_length = Math.log10(number).to_i + 1
+    #number_length = Math.log10(number).to_i + 1
     expect(number_length).to eq 4
   end
 
