@@ -6,7 +6,7 @@ class Account
     @exp_date = '04/17'
     @account_status = :active
     @account_owner = 'Rod'
-    correct_pin_length?(pin_code)
+    pin_code_length = correct_pin_length?(pin_code)
   end
 
   def correct_pin_length?(number)
