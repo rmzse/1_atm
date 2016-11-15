@@ -8,4 +8,8 @@ class Account
     @account_owner = 'Rod'
   end
 
+  def correct_pin_length?(number)
+    number_length = Math.log10(number).to_i + 1
+  end
+
 end
