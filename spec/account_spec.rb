@@ -18,7 +18,7 @@ describe Account do
     expect(subject.account_owner).to eq 'Rod'
   end
 
-  it 'checks if the pin code is 4 digits' do
+  it 'checks if the pin code is 4 digits on initialize' do
     expect(number_length).to eq 4
   end
 
