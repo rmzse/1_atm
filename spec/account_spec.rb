@@ -10,8 +10,8 @@ describe Account do
     expect(subject.exp_date).to eq '04/17'
   end
 
-  it 'has an account status of "active"' do
-    expect(subject.account_status)to eq(:active)
+  it 'has an account status of "active" on initialize' do
+    expect(subject.account_status).to eq(:active)
   end
 
 
