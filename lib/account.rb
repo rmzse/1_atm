@@ -6,12 +6,11 @@ class Account
     @exp_date = '04/17'
     @account_status = :active
     @account_owner = 'Rod'
-    @pin_code_length = correct_pin_length?(pin_code)
+    @pin_code_length = pin_length?(pin_code)
   end
 
-  def correct_pin_length?(number)
+  def pin_length?(number)
     number_length = Math.log10(number.to_i).to_i + 1
-    number_length == 4
   end
 
 end
