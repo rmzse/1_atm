@@ -1,5 +1,5 @@
 class Account
-  attr_accessor :pin_code
+  attr_accessor :pin_code,
 
   def initialize
     @pin_code = '1234'
