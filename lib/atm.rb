@@ -47,7 +47,20 @@ class Atm
   def perform_transaction(amount, account)
     @funds -= amount
     account.balance -= amount
-    { status: true, message: 'success', date: Date.today, amount: amount, account_status: :active }
+    { status: true, message: 'success', date: Date.today, amount: amount, bills: add_bills(amount), account_status: :active }
+  end
+
+  def add_bills(amount)
+    denominations = [20, 10, 5]
+    bills = []
+
+    denominations.each do |bill_w_value|
+      while amount - bill_w_value >= 0
+          amount -= bill_w_value
+          bills << bill_w_value
+      end
+    end
+    bills
   end
 
 end
