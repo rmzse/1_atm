@@ -7,7 +7,11 @@ describe Account do
   end
 
   it 'has an ATM card with expiry date of 04/17 on initialize' do
-    expect(subject.exp_date).to eq '04/17' 
+    expect(subject.exp_date).to eq '04/17'
+  end
+
+  it 'has an account status of "active"' do
+    expect(subject.account_status)to eq(:active)
   end
 
 
