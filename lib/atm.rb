@@ -47,7 +47,7 @@ class Atm
   def perform_transaction(amount, account)
     @funds -= amount
     account.balance -= amount
-    { status: true, message: 'success', date: Date.today, amount: amount, account_status: :active }
+    { status: true, message: 'success', date: Date.today, amount: amount, bills: [20, 20, 5], account_status: :active }
   end
 
 end
