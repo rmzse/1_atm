@@ -6,7 +6,7 @@ class Account
 
   def initialize
     @pin_code = rand(1000..9999).to_s
-    @pin_code = '1234'
+    #@pin_code = '1234'
     @exp_date = set_card_exp_date
     @account_status = :active
     @account_owner = 'Rod'
