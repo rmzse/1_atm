@@ -42,7 +42,7 @@ class Atm
 
   def account_disabled?(account_status)
      account_status == :disabled
-  end
+  end 
 
   def perform_transaction(amount, account)
     @funds -= amount
