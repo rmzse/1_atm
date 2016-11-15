@@ -3,6 +3,7 @@ require './lib/account.rb'
 describe Account do
 
   it 'has a pincode "1234" on initialize' do
+    #expect(subject.pin_code).to eq account.pin_code
     expect(subject.pin_code).to eq '1234'
   end
 
