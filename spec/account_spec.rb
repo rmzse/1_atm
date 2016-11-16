@@ -5,11 +5,10 @@ describe Account do
   let(:person) {instance_double('Person', name: 'Rod')}
   #subject { described_class.new( {owner:person} ) }
 
-  #it 'has a pincode "1234" on initialize' do
-  it 'has a randomized pincode on initialize' do
-    expect(subject.pin_code).to eq subject.pin_code
-    #expect(subject.pin_code).to eq account.pin_code
-    #expect(subject.pin_code).to eq '1234'
+  it 'has a randomized pincode of 4 digits on initialize' do
+    pin_code = rand(1000..9999).to_s
+    pin_code_length = Math.log10(pin_code.to_i).to_i + 1
+    expect(subject.pin_code_length).to eq 4
   end
 
   it 'has an ATM card with expiry date of 11/22 on initialize' do
@@ -22,12 +21,6 @@ describe Account do
 
   it 'has an account owner on initialize' do
     expect(subject.account_owner).to eq 'Rod'
-  end
-
-  it 'checks if the pin code is 4 digits on initialize' do
-    pin_code = rand(1000..9999).to_s
-    pin_code_length = Math.log10(pin_code.to_i).to_i + 1
-    expect(subject.pin_code_length).to eq 4
   end
 
   it 'disables an account for a person (instance)' do
