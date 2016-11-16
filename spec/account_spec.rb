@@ -7,9 +7,8 @@ describe Account do
 
 
   it 'has a randomized pincode of 4 digits on initialize' do
-    pin_code = rand(1000..9999).to_s
-    pin_code_length = Math.log10(pin_code.to_i).to_i + 1
-    expect(subject.pin_code_length).to eq 4
+    #pin_code_length = Math.log10(subject.pin_code.to_i).to_i + 1
+    expect(subject.pin_code).to eq Math.log10(subject.pin_code.to_i).to_i + 1
   end
 
 
