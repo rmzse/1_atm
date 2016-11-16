@@ -1,8 +1,8 @@
 class Person
   attr_accessor :name
 
-  def initialize
-    @name = "Xerxes"
+  def initialize(arg)
+    @name = arg
   end
 
 end
