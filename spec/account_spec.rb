@@ -28,8 +28,8 @@ describe Account do
   end
 
   it 'raises an error if no owner is set' do
-    expect{ described_class.new }.to raise_error 'Error: An account owner must be set!'
-  end 
+    expect{ described_class.new }.to raise_error 'Error: Missing account owner! An account owner must be set!'
+  end
 
 
 end
