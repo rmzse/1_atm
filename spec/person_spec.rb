@@ -5,7 +5,7 @@ describe Person do
   # subject { described_class.new(name: 'Xerxes') }
 
   it 'has the name "Xerxes" on initialize' do
-    expect(subject.name).to be 'Xerxes'
+    expect(subject.name).to eq 'Xerxes'
   end
 
   # it 'has a :name on initialize' do
