@@ -13,6 +13,10 @@ class Account
     @pin_code_length = get_n_length(pin_code)
   end
 
+  def disable_account
+    @account_status = :disabled
+  end
+
   private
 
   def get_n_length(number)

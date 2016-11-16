@@ -23,11 +23,13 @@ describe Account do
   end
 
   it 'checks if the pin code is 4 digits on initialize' do
+    #number_length = Math.log10(number.to_i).to_i + 1
     expect(subject.pin_code_length).to eq 4
   end
 
   it 'disables an account for a person (instance)' do
-    expect(subject.account).to eq :disabled
+    subject.disable_account
+    expect(subject.account_status).to eq :disabled
   end
 
 
