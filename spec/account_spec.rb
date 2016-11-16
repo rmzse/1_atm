@@ -22,7 +22,7 @@ describe Account do
   end
 
   it 'has an account owner on initialize' do
-    expect(subject.account_owner).to eq 'Rod'
+    expect(subject.account_owner).to eq person
   end
 
   it 'disables an account for a person (instance)' do
