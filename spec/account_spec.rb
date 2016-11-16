@@ -2,7 +2,8 @@ require './lib/account.rb'
 
 
 describe Account do
-  let(:perosn) {instance_double('Person', name: 'Rod')}
+  let(:person) {instance_double('Person', name: 'Rod')}
+  #subject { described_class.new( {owner:person} ) }
 
   #it 'has a pincode "1234" on initialize' do
   it 'has a randomized pincode on initialize' do
