@@ -2,6 +2,7 @@ require './lib/account.rb'
 
 
 describe Account do
+  let(:perosn) {instance_double('Person', name: 'Rod')}
 
   #it 'has a pincode "1234" on initialize' do
   it 'has a randomized pincode on initialize' do
@@ -23,7 +24,8 @@ describe Account do
   end
 
   it 'checks if the pin code is 4 digits on initialize' do
-    #number_length = Math.log10(number.to_i).to_i + 1
+    pin_code = rand(1000..9999).to_s
+    pin_code_length = Math.log10(pin_code.to_i).to_i + 1
     expect(subject.pin_code_length).to eq 4
   end
 
