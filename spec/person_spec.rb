@@ -32,7 +32,7 @@ describe Person do
       end
 
       it 'with themselves (him or her) as an owner' do
-        expect(subject.account.account_owner)
+        expect(subject.account.account_owner).to be subject
       end
 
   end
