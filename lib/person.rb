@@ -13,4 +13,8 @@ class Person
     @account = Account.new({ account_owner: self })
   end
 
+  def deposit(amount)
+    amount
+  end
+
 end

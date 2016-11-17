@@ -34,6 +34,15 @@ describe Person do
       it 'with themselves (him or her) as an owner' do
         expect(subject.account.account_owner).to be subject
       end
+  end
+
+  describe 'can manage funds if an account has been created' do
+    let(:atm) { Atm.new }
+    before { subject.create_account }
+
+    it 'can deposit funds' do
+      expect(subject.deposit(100)).to be_truthy
+    end
 
   end
 
