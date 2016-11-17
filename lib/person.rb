@@ -1,5 +1,5 @@
 class Person
-  attr_accessor :name, :cash
+  attr_accessor :name, :cash, :account
 
   def initialize(args = {})
     args[:name] != nil ? (@name = args[:name] ) : (raise 'Error: You need a person name!')
