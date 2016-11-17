@@ -14,6 +14,7 @@ class Person
   end
 
   def deposit(amount)
+    raise 'No account for deposits present.' if @account == nil
     amount
   end
 
