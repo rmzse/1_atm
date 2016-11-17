@@ -21,11 +21,10 @@ describe Person do
   end
 
   context 'this person can open an account = create an Account' do
-    before { subject.create_account } # create an acct to test on, remember {} = do..end
+    before { subject.create_account } # create an acct to test on, remember that before {} = before (:each) do..end
       it 'Person account attrib is of Account class' do
         expect(subject.account).to be_an_instance_of Account
       end
-    end
 
   end
 
