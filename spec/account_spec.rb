@@ -31,8 +31,8 @@ describe Account do
     expect{ described_class.new }.to raise_error 'Error: Missing account owner! An account owner must be set!'
   end
 
-  it 'has a :balance with a value of 5' do
-    expect(subject.balance).to eq 5
+  it 'has a :balance with a value of 0' do
+    expect(subject.balance).to eq 0
   end
 
 

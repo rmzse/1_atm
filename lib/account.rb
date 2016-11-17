@@ -9,7 +9,7 @@ class Account
     @exp_date = set_card_exp_date
     @account_status = :active
     args[:account_owner] != nil ? (@account_owner = args[:account_owner] ) : (raise 'Error: Missing account owner! An account owner must be set!')
-    @balance = 5
+    @balance = 0
   end
 
   def disable_account
