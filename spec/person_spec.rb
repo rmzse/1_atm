@@ -2,7 +2,7 @@ require './lib/person.rb'
 # require './lib/atm.rb'
 
 describe Person do
-  subject { described_class.new(name: 'Xerxes') }
+  subject { described_class.new(name: 'Xerxes', cash: 0) }
 
   it 'has a :name on initialize' do
     expect(subject.name).not_to be nil
