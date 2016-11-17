@@ -21,8 +21,8 @@ describe Person do
   end
 
   context 'this person can open an account = create an Account' do
-    before { subject.create_account } do
-      it 'is of Account class' do
+    before '{ subject.create_account }' do
+      it 'Person account attrib is of Account class' do
         expect(subject.account).to be_an_instance_of Account
       end
     end
