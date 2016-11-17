@@ -20,4 +20,13 @@ describe Person do
     expect(subject.account).to be nil
   end
 
+  context 'this person can open an account = create an Account' do
+    before { subject.create_account } do
+      it 'is of Account class' do
+        expect(subject.account).to be_an_instance_of Account
+      end
+    end
+
+  end
+
 end
