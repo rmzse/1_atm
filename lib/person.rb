@@ -21,7 +21,8 @@ class Person
 
   def withdraw(args = {})
     raise 'An ATM is required.' if args[:atm] == nil
-    args[:amount]
+    @cash += args[:amount]
+    @account.balance -= args[:amount]
   end
 
 end
