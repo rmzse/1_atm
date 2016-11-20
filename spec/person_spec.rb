@@ -61,6 +61,14 @@ describe Person do
       expect { command.call }.to raise_error 'An ATM is required.'
     end
 
+    it 'adds funds to cash at the same time as it deducts funds from account balance' do
+      subject.cash = 100
+      subject.deposit(100)
+      subject.subject.withdraw(amount: 100, pin: subject.account.pin_code, account: subject.account)
+      expect(subject.account.account.balance).to be 0
+      expect(subject.cash).to be 100
+    end
+
   end
 
   describe 'cannot manage funds if no account has been created,' do
