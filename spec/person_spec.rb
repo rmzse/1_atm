@@ -51,6 +51,11 @@ describe Person do
       expect(subject.cash).to be 0
     end
 
+    it 'and can withdraw funds' do
+      command = lambda { subject.withdraw(amount: 100, pin_code: subject.account.pin_code, account: subject.account, atm: 'ICA') }
+      expect(command.call).to be_truthy
+    end
+
   end
 
   describe 'cannot manage funds if no account has been created,' do
