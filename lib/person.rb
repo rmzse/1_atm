@@ -20,8 +20,6 @@ class Person
   end
 
   def withdraw(args = {})
-    @cash += amount
-    @balance -= amount
   end
 
 end
