@@ -1,8 +1,9 @@
 class Atm
-  attr_accessor :funds
+  attr_accessor :funds, :atm
 
   def initialize
     @funds = 1000
+    @atm = 'ICA'
   end
 
   def withdraw(amount, pin_code, account)
@@ -42,7 +43,7 @@ class Atm
 
   def account_disabled?(account_status)
      account_status == :disabled
-  end 
+  end
 
   def perform_transaction(amount, account)
     @funds -= amount
