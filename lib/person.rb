@@ -19,7 +19,7 @@ class Person
     @account.balance += amount
   end
 
-  def withdraw(amount, pin_code, account, atm)
+  def withdraw(args = {})
     @cash += amount
     @balance -= amount
   end
