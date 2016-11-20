@@ -20,6 +20,7 @@ class Person
   end
 
   def withdraw(args = {})
+    args[:amount]
   end
 
 end
