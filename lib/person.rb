@@ -1,7 +1,7 @@
 require './lib/account.rb'
 
 class Person
-  attr_accessor :name, :cash, :account
+  attr_accessor :name, :cash, :account, :atm
 
   def initialize(args = {})
     args[:name] != nil ? (@name = args[:name] ) : (raise 'Error: You need a person name!')
@@ -17,6 +17,11 @@ class Person
     raise 'No account for deposits present.' if @account == nil
     @cash -= amount
     @account.balance += amount
+  end
+
+  def withdraw(amount, pin_code, account, atm)
+    @cash += amount
+    @balance -= amount
   end
 
 end
