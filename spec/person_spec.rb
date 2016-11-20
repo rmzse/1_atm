@@ -40,7 +40,7 @@ describe Person do
     let(:atm) { Atm.new }
     before { subject.create_account }
 
-    it 'can deposit funds' do
+    it 'can deposit funds - take from cash in pocket' do
       expect(subject.deposit(100)).to be_truthy
     end
 
@@ -54,6 +54,11 @@ describe Person do
     it 'and can withdraw funds' do
       command = lambda { subject.withdraw(amount: 100, pin_code: subject.account.pin_code, account: subject.account, atm: 'ICA') }
       expect(command.call).to be_truthy
+    end
+
+    it 'raises an error when withdrawing if no ATM is passed in' do
+      command = lambda { subject.withdraw(amount: 100, pin: subject.account.pin_code, account: subject.account) }
+      expect { command.call }.to raise_error 'An ATM is required.'
     end
 
   end
