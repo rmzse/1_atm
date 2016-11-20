@@ -20,6 +20,7 @@ class Person
   end
 
   def withdraw(args = {})
+    raise 'An ATM is required.' if args[:atm] == nil
     args[:amount]
   end
 
