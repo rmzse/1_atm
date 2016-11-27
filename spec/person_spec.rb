@@ -21,7 +21,7 @@ describe Person do
   end
 
   context 'this person can open an account = create an Account' do
-    before { subject.create_account } # create an acct to test on, remember that before {} = before (:each) do..end
+    before { subject.create_account } 
 
       it 'after account creation, this person has an account' do
         expect(subject.account).not_to be nil
